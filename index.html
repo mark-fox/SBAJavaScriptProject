@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Manager</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Welcome!</h1>
-    <form method="post">
-        <label>Username:</label>
-        <imput type="text" placeholder="Enter Username/Email"></imput>
-
-        <label>Password:</label>
-        <imput type="password" placeholder="Enter Password"></imput>
-
-        <button type="submit">Login</button>
-        <a href="pages/signup.html">Sign Up</a>
+    <h3>Please log into your account or click the Sign Up link to create a new account.</h3>
+    
+    <form id="loginForm" action="pages/dashboard.html" method="post">
+        <label for="usernameLogin">Username:</label>
+        <input type="text" id="usernameLogin" class="usernameInput" placeholder="Enter Username/Email" name="usernameLogin"></input>
+        <br>
+        <label for="passwordLogin">Password:</label>
+        <input type="password" id="passwordLogin" class="passwordInput" placeholder="Enter Password" name="passwordLogin"></input>
+        <br>
+        <button type="submit" id="loginBtn">Login</button>
+        <br>
+        <span><a href="pages/forgot.html">Forgot password?</a><a href="pages/signup.html">Sign Up</a></span>
     </form>
     <script src="js/scripts.js"></script>
 </body>
