@@ -11,7 +11,15 @@
     <br>
     <div class="search">
         <label for="searchInput">Search for Patient:</label>
-        <input type="search" name="searchInput" id="searchInput" placeholder="Patient Name">
+        <input type="search" name="searchInput" id="searchInput">
+
+        <select class="dropdownMenu">
+            <option class="placeholderOpt" disabled selected value="">Search By...</option>
+            <option class="dropdowns" value="1">ID</option>
+            <option class="dropdowns" value="2">Patient</option>
+            <option class="dropdowns" value="3">Doctor</option>
+        </select>
+
         <button>Search</button>
     </div>
     <br>
