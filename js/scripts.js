@@ -1,9 +1,11 @@
 console.log("js page reached");
 
-// function startup() {
-//     const loginButton = document.getElementById("loginBtn");
-//     loginButton.onclick = login();
-// }
+function startup() {
+    // const loginButton = document.getElementById("loginBtn");
+    // loginButton.onclick = login();
+    let signupForm = document.getElementById("signupForm");
+    signupForm.addEventListener("submit", signup);
+}
 
 function login () {
     console.log("login function reached...");
@@ -11,4 +13,14 @@ function login () {
     window.location.href="/pages/dashboard.html";
     console.log(username);
 }
-// startup();
+
+function signup(event) {
+    event.preventDefault();
+    console.log("form submitted...");
+    window.location = "./dashboard.html";
+    // alert("new account created");
+}
+
+
+
+startup();
