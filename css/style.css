@@ -11,3 +11,33 @@
     margin: 5px;
     padding: 5px;
 }
+
+.navUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+}
+
+/* Navbar */
+.navUl li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+.navUl a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navUl a:hover {
+    background-color: rgb(100, 110, 110);
+}
+.active {
+    background-color: #4caf50;
+}
