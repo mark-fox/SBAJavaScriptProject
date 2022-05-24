@@ -12,6 +12,8 @@
     padding: 5px;
 }
 
+
+/* Navbar */
 .navUl {
     list-style-type: none;
     margin: 0;
@@ -22,8 +24,6 @@
     top: 0;
     width: 100%;
 }
-
-/* Navbar */
 .navUl li {
     float: left;
     border-right: 1px solid #bbb;
@@ -40,4 +40,7 @@
 }
 .active {
     background-color: #4caf50;
+}
+.navright {
+    float: right;
 }
