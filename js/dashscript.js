@@ -15,10 +15,15 @@ function startDash() {
                 // for (let i = 0; i < arr.length; i++) {
                 //     console.log(arr[i]);
                 // }
+                console.log(localStorage.getItem("patients"));
+
+                if (localStorage.getItem("patients") == null || localStorage.getItem("patients") == undefined) {
+
                 tempdb = allText.split("\n");
                 let tempdb2 = tempdb.join(';'); //JSON.stringify(tempdb); //tempdb.join(";");
                 console.log(tempdb2);
 // TODO if time, add .contains validation
+                console.log("current storage is:");
                 console.log(localStorage.getItem("patients"));
                 
                 // if (localStorage.getItem("patients") == null) {
@@ -26,11 +31,19 @@ function startDash() {
                 // }
                 tempdb = localStorage.getItem("patients").split(";");
                 console.log(tempdb);
+                console.log("storage after:");
+                console.log(localStorage.getItem("patients"));
                 // console.log(checkForAdd());
                 // if (checkForAdd()) {
                 //     tempdb.push(localStorage.getItem("addpatient"));
                 //     localStorage.setItem("addpatient", "");
                 // }
+
+                } else {
+                    tempdb = localStorage.getItem("patients").split(";");
+                }
+
+                console.log(tempdb);
 
                 for (let i = 0; i < tempdb.length; i++) {
                     let newRow = document.getElementById("patientTable").insertRow(i+1);
