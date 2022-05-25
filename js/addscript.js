@@ -4,6 +4,8 @@ function startAdd() {
     document.getElementById("addpatientForm").addEventListener("submit", addPatient);
 }
 
+
+
 function addPatient(event) {
     event.preventDefault();
     console.log("add button pressed");
@@ -30,15 +32,20 @@ function addPatient(event) {
     // TODO REDIRECT
 }
 
+
+
 function findNextId(db) {
-    let id = 1;
+    let id = 45;
     console.log(typeof id);
-    while (!db.includes(id.toString())) {
+    while (db.includes(id.toString())) {
         id++;
         console.log("in loop: " + typeof id);
     }
+    console.log("after loop: " +  id);
     return id;
 }
+
+
 
 function updateDb(db, id, patient, doctor) {
     // let arr = db.split(";");

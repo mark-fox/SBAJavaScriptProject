@@ -27,7 +27,12 @@ function login (event) {
     // console.log(password);
 }
 
-
+// For testing purposes
+function reset () {
+    localStorage.setItem("patients", "");
+    localStorage.setItem("login", "false");
+}
+// reset();
 
 
 
