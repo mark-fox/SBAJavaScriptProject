@@ -17,7 +17,7 @@ function startDash() {
                 // }
                 console.log(localStorage.getItem("patients"));
 
-                if (localStorage.getItem("patients") == null || localStorage.getItem("patients") == undefined) {
+                if (localStorage.getItem("patients") == null || localStorage.getItem("patients") == undefined || localStorage.getItem("patients") == "") {
 
                 tempdb = allText.split("\n");
                 let tempdb2 = tempdb.join(';'); //JSON.stringify(tempdb); //tempdb.join(";");
