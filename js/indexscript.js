@@ -19,6 +19,7 @@ function login (event) {
     password = pass;
 
     if (username == name && password == pass && emailCheck.test(username)) {
+        localStorage.setItem("login", "true");
         window.location.href="./pages/dashboard.html";
     } else {
         document.getElementById("invalidLogin").innerHTML = "Invalid Username/Password";

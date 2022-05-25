@@ -1,8 +1,11 @@
 console.log("dashscript reached");
 let tempdb;
 
-
+// TODO break into smaller functions if time
 function startDash() {    
+
+    document.getElementById("searchBtn").onclick = runSearch;
+
     let rawFile = new XMLHttpRequest();
     rawFile.open("GET", "../tempdb.txt", false);
     console.log("what is rawFile: " + typeof rawFile); 
@@ -72,6 +75,24 @@ function startDash() {
     
 // }
 
+function runSearch() {
+    console.log("search button clicked");
+    let menu = document.getElementById("searchMenu");
+    let choiceTxt = menu.options[menu.selectedIndex].text;
+    let resultsBox = document.getElementById("searching");
+    let searchText = document.getElementById("searchInput").value;
+    let str = "Searching for: ";
+    // console.log(choice);
+    let choice = parseInt(menu.value);
+    console.log(choice);
+
+    if (choice > 0) {
+        str = str + choiceTxt + " = " + searchText;
+    } else {
+        str = "";
+    }
+    resultsBox.innerHTML = str;
+}
 
 
 startDash();

@@ -12,7 +12,7 @@ function addPatient(event) {
     let patient = "testpatient"; // document.getElementById("patientName").value;
     let doctor = "testdoctor"; // document.getElementById("doctorName").value;
     let birthdate = document.getElementById("birthdate").value;
-    console.log("birthdate type: " + typeof birthdate);
+    console.log("birthdate: " + birthdate);
     let height = document.getElementById("patientHeight").value;
     let weight = document.getElementById("patientWeight").value;
 

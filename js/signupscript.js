@@ -11,14 +11,20 @@ function signup(event) {
     let usernameSignup = document.getElementById("usernameSignup").value;
     let invalid = document.getElementById("invalidSignup");
 // TODO change back after testing
-    if (!emailCheck.test(usernameSignup)) {
+    console.log("username: " + typeof usernameSignup);
+    console.log(emailCheck.test(usernameSignup));
+    usernameSignup = "test@email.com";
+    if (emailCheck.test(usernameSignup)) {
+        console.log("checkpoint");
         let pass1 = document.getElementById("passwordSignup").value;
         let pass2 = document.getElementById("passwordSignup2").value;
-        // console.log(typeof pass1);
-        // console.log(typeof pass2);
+        console.log(typeof pass1);
+        console.log(typeof pass2);
+        
         if (pass1 != "" && pass2 != "" && pass1 == pass2) {
             window.location.href = "./dashboard.html";
         } else {
+            localStorage.setItem("login", "true");
             invalid.innerHTML = "Both password fields must match";
         }                
     } else {

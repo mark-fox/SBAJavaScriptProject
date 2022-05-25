@@ -24,15 +24,16 @@
         <label for="searchInput">Search for Patient:</label>
         <input type="search" name="searchInput" id="searchInput">
 
-        <select class="dropdownMenu">
-            <option class="placeholderOpt" disabled selected value="">Search By...</option>
+        <select class="dropdownMenu" id="searchMenu">
+            <option class="placeholderOpt" disabled selected value="0">Search By...</option>
             <option class="dropdowns" value="1">ID</option>
             <option class="dropdowns" value="2">Patient</option>
             <option class="dropdowns" value="3">Doctor</option>
         </select>
 
-        <button>Search</button>
+        <button id="searchBtn">Search</button>
     </div>
+    <p class="searchResult" id="searching" style="font-style: italic"></p>
     <br>
     <!-- <input type="file" id="tableFile"> -->
     <div class="patientList">
