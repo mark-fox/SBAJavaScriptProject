@@ -1,11 +1,10 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
+* { 
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: 'Oxygen', sans-serif;
+} 
 
-/* .usernameInput {
 
-} */
 
 #loginForm a {
     margin: 5px;
