@@ -5,6 +5,7 @@ let tempdb;
 function startDash() {    
     let rawFile = new XMLHttpRequest();
     rawFile.open("GET", "../tempdb.txt", false);
+    console.log("what is rawFile: " + typeof rawFile); 
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status === 0) {
@@ -16,6 +17,11 @@ function startDash() {
                 // }
                 tempdb = allText.split("\n");
                 
+                console.log(checkForAdd());
+                if (checkForAdd()) {
+                    tempdb.push(localStorage.getItem("addpatient"));
+                    localStorage.setItem("addpatient", "");
+                }
 
                 for (let i = 0; i < tempdb.length; i++) {
                     let newRow = document.getElementById("patientTable").insertRow(i+1);
@@ -33,6 +39,16 @@ function startDash() {
     // console.log(tempdb);
 }
 
+function checkForAdd() {
+    let newpatient = localStorage.getItem("addpatient");
+    console.log("newpatient: " + newpatient);
+    if (newpatient != "") {
+        return true;
+    } else {
+        return false;
+    }
+    
+}
 
 
 
