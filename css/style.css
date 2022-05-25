@@ -8,22 +8,125 @@
 body {
     background: rgb(0,164,255);
     background: linear-gradient(90deg, rgb(51, 182, 253) 0%, rgba(223,228,245,0.9948354341736695) 50%, rgb(51, 182, 253) 100%);
+    color:rgb(30, 59, 185);
+    font-weight: bold;
+    
+}
+
+h1 {
+    text-shadow: 0 2px;
+    margin-left: 20px;
+}
+
+h3 {
+    margin-left: 20px;
 }
 
 #loginForm a {
     margin: 5px;
     padding: 5px;
 }
+#loginForm span {
+    margin-left: 70px;
+}
 
+#searching {
+    margin-bottom: 0;
+    margin-left: 20px;
+    /* vertical-align: center; */
+    /* padding-top: 10px; */
+}
+
+#searchInput, #searchMenu {
+    padding-right: 60px;
+
+}
+
+input, select {
+    padding: 3px;
+    box-shadow: 3px 3px 3px gray;
+    border-radius: 5px;
+    background-color: rgb(51, 182, 253);
+    font-weight: bold;
+    min-height: 20px;
+}
+
+select {
+    width: 150px;
+}
+
+#addpatientForm input {
+    width: 150px;
+}
+
+
+
+label {
+    float: left;
+    text-align: right;
+    min-width: 135px;
+    padding-right: 10px;
+    min-height: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search label {
+    vertical-align: center;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+button {
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    background-color: #4caf50;
+    color:rgb(30, 59, 185);
+    font-weight: bold;
+    font-family: 'Oxygen', sans-serif;
+    font-size: large;
+}
+
+button:hover {
+    background-color: rgb(100, 110, 110);
+}
+
+#addpatientBtn {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+#searchBtn {
+    margin-left: 5px;
+}
+
+#loginBtn {
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#signupBtn {
+    margin-left: 55px;
+    margin-top: 15px;
+}
+
+#signupForm, #invalidSighnup {
+    margin-left: 20px;
+}
+
+.aboutParas {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
 
 #patientTable {
     border-collapse: collapse;
-    margin: 25px;
+    margin: 10px 0 0 20px;
     font-size: 0.9em;
-    /* font-family: sans-serif; */
-    min-width: 600px;
+    min-width: 620px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    
 }
 
 .tableHeader {
