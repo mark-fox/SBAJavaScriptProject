@@ -14,7 +14,9 @@ function login (event) {
     let username = document.getElementById("usernameLogin").value;
     let password = document.getElementById("passwordLogin").value;
 
-    // console.log(emailCheck.test(username));
+    // TODO remove after testing
+    username = name;
+    password = pass;
 
     if (username == name && password == pass && emailCheck.test(username)) {
         window.location.href="./pages/dashboard.html";

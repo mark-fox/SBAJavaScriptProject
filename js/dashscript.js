@@ -16,12 +16,21 @@ function startDash() {
                 //     console.log(arr[i]);
                 // }
                 tempdb = allText.split("\n");
+                let tempdb2 = tempdb.join(';'); //JSON.stringify(tempdb); //tempdb.join(";");
+                console.log(tempdb2);
+// TODO if time, add .contains validation
+                console.log(localStorage.getItem("patients"));
                 
-                console.log(checkForAdd());
-                if (checkForAdd()) {
-                    tempdb.push(localStorage.getItem("addpatient"));
-                    localStorage.setItem("addpatient", "");
-                }
+                // if (localStorage.getItem("patients") == null) {
+                    localStorage.setItem("patients", tempdb2); //allText.join("\n")); //.split("\n"));
+                // }
+                tempdb = localStorage.getItem("patients").split(";");
+                console.log(tempdb);
+                // console.log(checkForAdd());
+                // if (checkForAdd()) {
+                //     tempdb.push(localStorage.getItem("addpatient"));
+                //     localStorage.setItem("addpatient", "");
+                // }
 
                 for (let i = 0; i < tempdb.length; i++) {
                     let newRow = document.getElementById("patientTable").insertRow(i+1);
@@ -39,16 +48,16 @@ function startDash() {
     // console.log(tempdb);
 }
 
-function checkForAdd() {
-    let newpatient = localStorage.getItem("addpatient");
-    console.log("newpatient: " + newpatient);
-    if (newpatient != "") {
-        return true;
-    } else {
-        return false;
-    }
+// function checkForAdd() {
+//     let newpatient = localStorage.getItem("addpatient");
+//     console.log("newpatient: " + newpatient);
+//     if (newpatient != "") {
+//         return true;
+//     } else {
+//         return false;
+//     }
     
-}
+// }
 
 
 
