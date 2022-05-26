@@ -16,10 +16,12 @@ body {
 h1 {
     text-shadow: 0 2px;
     margin-left: 20px;
+    text-align: center;
 }
 
 h3 {
     margin-left: 20px;
+    text-align: center;
 }
 
 #loginForm a {
@@ -111,8 +113,22 @@ button:hover {
     margin-top: 15px;
 }
 
-#signupForm, #invalidSighnup {
+#signupForm, #invalidSignup {
     margin-left: 20px;
+}
+
+.aboutDivs {
+    display: flex;
+}
+.addDiv, .loginDiv, .signupDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.invalidInfo {
+    color: rgb(173, 2, 2);
 }
 
 .aboutParas {

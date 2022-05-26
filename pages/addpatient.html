@@ -23,26 +23,29 @@
     </ul>
 
     <h1>Add New Patient</h1>
+    <div class="addDiv">
+        <!-- Form for adding a new patient to the 'database' -->
+        <form id="addpatientForm" action="" method="post">
+            <label for="patientName" class="formLabels">Patient Name:</label>
+            <input type="text" id="patientName"></imput>
+            <br>
+            <label for="doctorName" class="formLabels">Doctor Name:</label>
+            <input type="text" id="doctorName"></input>
+            <br>
+            <label for="birthdate" class="formLabels">Date of Birth:</label>
+            <input type="date" id="birthdate">
+            <br>
+            <label for="patientHeight" class="formLabels">Height (cm):</label>
+            <input type="number" id="patientHeight">
+            <br>
+            <label for="patientWeight" class="formLabels">Weight (km):</label>
+            <input type="number" id="patientWeight">
+            <br>
+            <button type="submit" id="addpatientBtn">Add New Patient</button>
+        </form>
 
-    <!-- Form for adding a new patient to the 'database' -->
-    <form id="addpatientForm" action="" method="post">
-        <label for="patientName" class="formLabels">Patient Name:</label>
-        <input type="text" id="patientName"></imput>
-        <br>
-        <label for="doctorName" class="formLabels">Doctor Name:</label>
-        <input type="text" id="doctorName"></input>
-        <br>
-        <label for="birthdate" class="formLabels">Date of Birth:</label>
-        <input type="date" id="birthdate">
-        <br>
-        <label for="patientHeight" class="formLabels">Height (cm):</label>
-        <input type="number" id="patientHeight">
-        <br>
-        <label for="patientWeight" class="formLabels">Weight (km):</label>
-        <input type="number" id="patientWeight">
-        <br>
-        <button type="submit" id="addpatientBtn">Add New Patient</button>
-    </form>
+        <img src="../images/img4.jpg" width="500">
+    </div>
 
     <script src="../js/addscript.js"></script>
 </body>
