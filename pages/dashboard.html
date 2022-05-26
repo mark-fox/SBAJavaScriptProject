@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <!-- Web Fonts and Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
+    <!-- Navbar -->
     <ul class="navUl">
         <li><a href="dashboard.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
@@ -23,10 +24,11 @@
     
     <h1>My Dashboard</h1>
     <br>
+    <!-- Search fields -->
     <div class="search">
         <label for="searchInput">Search for Patient:</label>
         <input type="search" name="searchInput" id="searchInput">
-
+        <!-- Dropdown menu -->
         <select class="dropdownMenu" id="searchMenu">
             <option class="placeholderOpt" disabled selected value="0">Search By...</option>
             <option class="dropdowns" value="1">ID</option>
@@ -37,10 +39,11 @@
         <button id="searchBtn">Search</button>
     </div>
 
+    <!-- Inline CSS example -->
     <p class="searchResult" id="searching" style="font-style: italic"></p>
 
     <br>
-
+    <!-- Table of patients that is populated in JavaScript -->
     <div class="patientList">
         <table id="patientTable">
             <tr class="tableHeader">
@@ -48,21 +51,6 @@
                 <th>Patient</th>
                 <th>Doctor</th>
             </tr>
-            <!-- <tr>
-                <td>12</td>
-                <td>Ralph Mittens</td>
-                <td>Dr. Rob Benme</td>
-            </tr>
-            <tr>
-                <td>38</td>
-                <td>Andrea Dreande</td>
-                <td>Dr. Will Tickel</td>
-            </tr>
-            <tr>
-                <td>42</td>
-                <td>Bobby Tables</td>
-                <td>Dr. Pete Atchoo</td>
-            </tr> -->
         </table>
     </div>
 
