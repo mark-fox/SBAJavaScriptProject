@@ -1,60 +1,45 @@
-console.log("addscript reached...");
-
+// Starting function
 function startAdd() {
     document.getElementById("addpatientForm").addEventListener("submit", addPatient);
 }
 
 
-
+// Function called upon submitting form
 function addPatient(event) {
     event.preventDefault();
-    console.log("add button pressed");
-    let patient = "testpatient"; // document.getElementById("patientName").value;
-    let doctor = "testdoctor"; // document.getElementById("doctorName").value;
+
+    let patient = document.getElementById("patientName").value;
+    let doctor = document.getElementById("doctorName").value;
     let birthdate = document.getElementById("birthdate").value;
-    console.log("birthdate: " + birthdate);
     let height = document.getElementById("patientHeight").value;
     let weight = document.getElementById("patientWeight").value;
 
     if (patient != "" && doctor != "") {
-
-    } else {
-
+        let db = localStorage.getItem("patients");
+        if (db != "" && db != null && db != undefined) {
+            let id = findNextId(db);
+            updateDb(db, id, patient, doctor);
+        }
+        window.location.href = "./dashboard.html";
     }
-    console.log("what is in storage");
-    console.log(localStorage.getItem("patients"));
-    let db = localStorage.getItem("patients");
-    if (db != "" && db != null && db != undefined) {
-        let id = findNextId(db);
-        updateDb(db, id, patient, doctor);
-    }
-    // localStorage.setItem("addpatient", "15,patient0,drzero");
-    // TODO REDIRECT
 }
 
 
-
+// Method to "autoincrement" IDs
 function findNextId(db) {
     let id = 45;
-    console.log(typeof id);
     while (db.includes(id.toString())) {
         id++;
-        console.log("in loop: " + typeof id);
     }
-    console.log("after loop: " +  id);
     return id;
 }
 
 
-
+// Function to update localStorage
 function updateDb(db, id, patient, doctor) {
-    // let arr = db.split(";");
-// TODO do i need to add newline as well?
+    // Creates string for localStorage
     let str = db + ";" + id + "," + patient + "," + doctor;
-    // arr.push(id+ "," + patient + "," + doctor);
-    localStorage.setItem("patients", str); //JSON.stringify(arr));
-    console.log("after update:");
-    console.log(localStorage.getItem("patients"));
+    localStorage.setItem("patients", str); 
 }
 
 
