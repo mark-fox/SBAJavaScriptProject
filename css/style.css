@@ -1,16 +1,13 @@
+/* Global CSS */
 * { 
-    /* margin: 0; */
-    /* padding: 0; */
     font-family: 'Oxygen', sans-serif;
-    
 } 
 
 body {
     background: rgb(0,164,255);
     background: linear-gradient(90deg, rgb(51, 182, 253) 0%, rgba(223,228,245,0.9948354341736695) 50%, rgb(51, 182, 253) 100%);
     color:rgb(30, 59, 185);
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 
 h1 {
@@ -22,26 +19,6 @@ h1 {
 h3 {
     margin-left: 20px;
     text-align: center;
-}
-
-#loginForm a {
-    margin: 5px;
-    padding: 5px;
-}
-#loginForm span {
-    margin-left: 70px;
-}
-
-#searching {
-    margin-bottom: 0;
-    margin-left: 20px;
-    /* vertical-align: center; */
-    /* padding-top: 10px; */
-}
-
-#searchInput, #searchMenu {
-    padding-right: 60px;
-
 }
 
 input, select {
@@ -57,12 +34,6 @@ select {
     width: 150px;
 }
 
-#addpatientForm input {
-    width: 150px;
-}
-
-
-
 label {
     float: left;
     text-align: right;
@@ -71,12 +42,6 @@ label {
     min-height: 20px;
     display: table-cell;
     vertical-align: middle;
-}
-
-.search label {
-    vertical-align: center;
-    margin-top: 12px;
-    margin-left: 20px;
 }
 
 button {
@@ -93,13 +58,18 @@ button:hover {
     background-color: rgb(100, 110, 110);
 }
 
-#addpatientBtn {
-    margin-top: 20px;
-    margin-left: 60px;
+.invalidInfo {
+    color: rgb(173, 2, 2);
 }
 
-#searchBtn {
-    margin-left: 5px;
+
+/* Login Page (index.html) */
+#loginForm a {
+    margin: 5px;
+    padding: 5px;
+}
+#loginForm span {
+    margin-left: 70px;
 }
 
 #loginBtn {
@@ -108,6 +78,13 @@ button:hover {
     margin-bottom: 15px;
 }
 
+.loginDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Signup Page (signup.html) */
 #signupBtn {
     margin-left: 55px;
     margin-top: 15px;
@@ -117,24 +94,30 @@ button:hover {
     margin-left: 20px;
 }
 
-.aboutDivs {
-    display: flex;
-}
-.addDiv, .loginDiv, .signupDiv {
+.signupDiv {
     display: flex;
     justify-content: space-around;
 }
 
 
-
-.invalidInfo {
-    color: rgb(173, 2, 2);
+/* Dashboard Page (dashboard.html) */
+#searching {
+    margin-bottom: 0;
+    margin-left: 20px;
 }
 
-.aboutParas {
+#searchInput, #searchMenu {
+    padding-right: 60px;
+}
+
+.search label {
+    vertical-align: center;
+    margin-top: 12px;
     margin-left: 20px;
-    margin-right: 20px;
-    text-align: justify;
+}
+
+#searchBtn {
+    margin-left: 5px;
 }
 
 #patientTable {
@@ -154,9 +137,38 @@ button:hover {
 #patientTable tr:hover {
     background-color: #4caf50;
 }
+
 #patientTable td, th, tr {
     padding: 5px 15px;
     border: 2px solid rgb(24, 141, 53);
+}
+
+
+/* Add Patient Page (addpatient.html) */
+#addpatientForm input {
+    width: 150px;
+}
+
+#addpatientBtn {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+
+/* About Page (about.html) */
+.aboutDivs {
+    display: flex;
+}
+
+.addDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aboutParas {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
 }
 
 
@@ -167,15 +179,15 @@ button:hover {
     padding: 0;
     overflow: hidden;
     background-color: rgb(24, 141, 53);
-     /* rgba(44, 92, 117, 0.705); */
-    /* position: fixed; */
     top: 0;
     width: 100%;
 }
+
 .navUl li {
     float: left;
     border-right: 1px solid #bbb;
 }
+
 .navUl a {
     display: block;
     color: white;
@@ -183,12 +195,15 @@ button:hover {
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .navUl a:hover {
     background-color: rgb(100, 110, 110);
 }
+
 .active {
     background-color: #4caf50;
 }
+
 .navright {
     float: right;
 }
